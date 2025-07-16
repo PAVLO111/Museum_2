@@ -1,3 +1,29 @@
 .header {
-  background-color: #56ee6a;
+  background-color: $dark-bg;
+
+  &__top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    height: 80px;
+
+    @include on-desktop {
+      height: 90px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__language {
+    display: none;
+
+    @include on-tablet {
+      display: inline-block;
+    }
+  }
 }
