@@ -1,6 +1,24 @@
 body {
   margin: 0;
-  
+
   background: $c-gray;
 }
 
+.section__title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 125%;
+  color: $section-title-color;
+
+  text-align: center;
+
+  @include on-tablet {
+    font-size: 40px;
+  }
+
+  @include on-desktop {
+    font-size: 48px;
+    line-height: 120%;
+  }
+}
