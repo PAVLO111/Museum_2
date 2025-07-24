@@ -1,10 +1,18 @@
 .header {
-  background-color: $bg-dark;
+  margin-bottom: 90px;
+
+  background-color: $bg-color;
   font-family: Raleway, sans-serif;
-  color: $white-main-color;
+  color: $white-color;
+
+  @include on-tablet {
+    margin-bottom: 100px;
+  }
 
   @include on-desktop {
     position: relative;
+
+    margin-bottom: 110px;
   }
 
   // #region top-bar
@@ -122,9 +130,9 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 100%;
-    color: $white-main-color;
+    color: $white-color;
 
-    background-color: $button-color;
+    background-color: $orange-color;
     text-align: center;
     text-decoration: none;
 
