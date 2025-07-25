@@ -7,6 +7,12 @@
     @include page-grid;
 
     row-gap: 60px;
+
+    @include on-tablet {
+      position: relative;
+
+      row-gap: 75px;
+    }
   }
 
   &__section-title {
@@ -23,7 +29,12 @@
     text-align: center;
 
     @include on-tablet {
+      grid-column: 1 / 5;
+
+      margin-top: 4px;
       font-size: 40px;
+
+      text-align: left;
     }
 
     @include on-desktop {
@@ -34,15 +45,15 @@
 
   &__block {
     grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: span 3;
+    }
   }
 
   &__image {
-    // grid-column: 1 / -1;
-
+    display: block;
     width: 100%;
-
-    // object-fit: cover;
-    // background-size: cover;
   }
 
   &__date {
@@ -73,6 +84,7 @@
     line-height: 125%;
 
     @include on-tablet {
+      height: 60px;
       font-size: 24px;
     }
   }
@@ -134,5 +146,12 @@
     font-weight: 600;
     text-align: center;
     text-decoration: none;
+
+    @include on-tablet {
+      position: absolute;
+      right: 0;
+
+      width: 30%;
+    }
   }
 }
