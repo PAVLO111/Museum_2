@@ -3,6 +3,14 @@
 
   margin-bottom: 120px;
 
+  @include on-tablet {
+    margin-bottom: 160px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 200px;
+  }
+
   &__content {
     @include page-grid;
 
@@ -16,9 +24,11 @@
 
     @include on-desktop {
       row-gap: 71px;
-
-      grid-column: span 6;
     }
+  }
+
+  &__content:last-child {
+    row-gap: 30px;
   }
 
   &__section-title {

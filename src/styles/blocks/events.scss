@@ -3,6 +3,14 @@
 
   margin-bottom: 90px;
 
+  @include on-tablet {
+    margin-bottom: 100px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 110px;
+  }
+
   &__content {
     @include page-grid;
 
@@ -10,15 +18,15 @@
 
     @include on-tablet {
       position: relative;
-
-      row-gap: 75px;
     }
 
     @include on-desktop {
       row-gap: 71px;
-
-      grid-column: span 6;
     }
+  }
+
+  &__content:last-child {
+    row-gap: 30px;
   }
 
   &__section-title {
@@ -31,8 +39,6 @@
     font-weight: 700;
     line-height: 125%;
     color: $black-color;
-
-    // text-align: center;
 
     @include on-tablet {
       grid-column: 1 / 5;
@@ -55,17 +61,23 @@
     grid-column: 1 / -1;
 
     @include on-tablet {
-      grid-column: span 3;
+      grid-column: span 6;
     }
 
     @include on-desktop {
-      grid-column: span 6;
+      grid-column: span 12;
     }
   }
 
   &__image {
     display: block;
     width: 100%;
+
+    @include on-tablet {
+      float: left;
+      width: 48%;
+      margin-right: 4%;
+    }
 
     @include on-desktop {
       display: none;
@@ -90,7 +102,7 @@
     color: $orange-color;
 
     @include on-tablet {
-      margin: 30px 0 10px;
+      margin: 0 0 10px;
     }
 
     @include on-desktop {
@@ -129,7 +141,7 @@
     color: $gray-color;
 
     @include on-tablet {
-      margin: 20px 0 40px;
+      margin: 20px 0 50px;
     }
 
     @include on-desktop {
@@ -156,6 +168,10 @@
     background-color: $orange-color;
     text-align: center;
     text-decoration: none;
+
+    @include on-tablet {
+      width: 48%;
+    }
 
     @include on-desktop {
       width: 48%;
