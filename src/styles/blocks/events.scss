@@ -18,6 +18,7 @@
 
     @include on-tablet {
       position: relative;
+      row-gap: 0;
     }
 
     @include on-desktop {
@@ -27,6 +28,10 @@
 
   &__content:last-child {
     row-gap: 30px;
+
+    @include on-tablet {
+      row-gap: 70px;
+    }
   }
 
   &__section-title {
@@ -43,7 +48,7 @@
     @include on-tablet {
       grid-column: 1 / 5;
 
-      margin-top: 4px;
+      margin: 4px 0;
       font-size: 40px;
 
       text-align: left;
@@ -52,6 +57,8 @@
     @include on-desktop {
       grid-column: 1 / 8;
 
+      // margin: 4px 0 70px;
+      // margin-top: 4px;
       font-size: 48px;
       line-height: 120%;
     }
