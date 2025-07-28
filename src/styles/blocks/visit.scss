@@ -2,6 +2,10 @@
   color: $white-color;
   background-color: $bg-color;
 
+  @include on-desktop {
+    display: flex;
+  }
+
   &__container {
     padding: 50px 20px;
 
@@ -12,7 +16,7 @@
     @include on-desktop {
       max-width: 1440px;
       margin-inline: auto;
-      padding-inline: 205px 55px;
+      padding: 205px 55px 205px 0;
     }
   }
 
@@ -25,7 +29,6 @@
 
     @include on-desktop {
       display: block;
-      float: left;
     }
   }
 
@@ -47,6 +50,9 @@
     }
 
     @include on-desktop {
+      grid-column: 1 / -1;
+
+      padding: 19px 0;
       font-size: 80px;
     }
   }
@@ -68,6 +74,8 @@
     }
 
     @include on-desktop {
+      grid-column: 1 / 10;
+
       margin: 10px 0 50px;
     }
   }
@@ -96,7 +104,7 @@
     }
 
     @include on-desktop {
-      // font-size: 80px;
+      grid-column: 1 / 6;
     }
   }
 }
