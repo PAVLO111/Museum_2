@@ -1,6 +1,7 @@
 .visit {
   color: $white-color;
   background-color: $bg-color;
+  font-family: Raleway, sans-serif;
 
   @include on-desktop {
     display: flex;

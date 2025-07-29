@@ -1,5 +1,118 @@
 .news {
+  background-color: $white-color;
+  font-family: Raleway, sans-serif;
+  color: $black-color;
+
   &__content {
-    // @include page-grid;
+    @include page-grid;
+
+    margin: 90px 0 120px;
+
+    @include on-tablet {
+      margin: 120px 0 160px;
+    }
+  }
+
+  &__section-title {
+    grid-column: 1 / -1;
+
+    margin: 0 0 60px;
+
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 125%;
+
+    @include on-tablet {
+      margin: 0 0 75px;
+      font-size: 40px;
+    }
+
+    @include on-desktop {
+      margin: 0 0 55px;
+      font-size: 48px;
+      line-height: 120%;
+    }
+  }
+
+  &__block {
+    grid-column: 1 / -1;
+  }
+
+  &__block--margin {
+    margin-bottom: 50px;
+
+    @include on-tablet {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    display: block;
+  }
+
+  &__date {
+    margin: 20px 0 0 0;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 140%;
+
+    @include on-tablet {
+      margin: 30px 0 0 0;
+    }
+
+    @include on-desktop {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  &__block-title {
+    margin: 0;
+
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 125%;
+
+    @include on-tablet {
+      line-height: 150%;
+    }
+  }
+
+  &__subtitle {
+    margin: 20px 0 0 0;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    color: $gray-color;
+
+    @include on-tablet {
+      margin: 0;
+      margin-top: 18px;
+    }
+  }
+
+  &__link {
+    grid-column: 1 / -1;
+
+    box-sizing: border-box;
+    height: 60px;
+    margin: 0;
+    margin-top: 30px;
+    padding: 22px 0;
+    border: 1px solid $orange-color;
+    color: $orange-color;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%;
+    text-decoration: none;
+    text-align: center;
+
+    @include on-tablet {
+      margin: 0;
+    }
   }
 }
