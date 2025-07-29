@@ -3,13 +3,19 @@
   font-family: Raleway, sans-serif;
   color: $black-color;
 
+  &__wrapper {
+    padding: 90px 0 120px;
+
+    @include on-tablet {
+      padding: 120px 0 160px;
+    }
+  }
+
   &__content {
     @include page-grid;
 
-    margin: 90px 0 120px;
-
     @include on-tablet {
-      margin: 120px 0 160px;
+      position: relative;
     }
   }
 
@@ -37,6 +43,11 @@
 
   &__block {
     grid-column: 1 / -1;
+
+    @include on-tablet {
+      grid-column: span 3;
+      margin: 0;
+    }
   }
 
   &__block--margin {
@@ -49,6 +60,7 @@
 
   &__image {
     display: block;
+    width: 100%;
   }
 
   &__date {
@@ -112,6 +124,10 @@
     text-align: center;
 
     @include on-tablet {
+      position: absolute;
+      right: 0;
+
+      width: 30.5%;
       margin: 0;
     }
   }
