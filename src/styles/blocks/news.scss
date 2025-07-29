@@ -31,11 +31,13 @@
 
     @include on-tablet {
       margin: 0 0 75px;
+      padding: 3px 0;
       font-size: 40px;
     }
 
     @include on-desktop {
       margin: 0 0 55px;
+      padding: 1px 0;
       font-size: 48px;
       line-height: 120%;
     }
@@ -47,6 +49,10 @@
     @include on-tablet {
       grid-column: span 3;
       margin: 0;
+    }
+
+    @include on-desktop {
+      grid-column: span 6;
     }
   }
 
@@ -61,21 +67,34 @@
   &__image {
     display: block;
     width: 100%;
+
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__image--desktop {
+    display: none;
+
+    @include on-desktop {
+      display: block;
+      width: 100%;
+    }
   }
 
   &__date {
-    margin: 20px 0 0 0;
+    margin: 20px 0 0;
 
     font-size: 14px;
     font-weight: 400;
     line-height: 140%;
 
     @include on-tablet {
-      margin: 30px 0 0 0;
+      margin: 30px 0 0;
     }
 
     @include on-desktop {
-      margin: 20px 0 0 0;
+      margin: 20px 0 0;
     }
   }
 
@@ -93,7 +112,7 @@
   }
 
   &__subtitle {
-    margin: 20px 0 0 0;
+    margin: 20px 0 0;
 
     font-size: 16px;
     font-weight: 400;
@@ -129,6 +148,10 @@
 
       width: 30.5%;
       margin: 0;
+    }
+
+    @include on-desktop {
+      width: 23%;
     }
   }
 }
