@@ -1,0 +1,32 @@
+.subscription {
+  margin-bottom: 120px;
+  background-color: $bg-color;
+
+  &__wrapper {
+    @include page-grid;
+  }
+
+  &__title {
+    grid-column: 1 / -1;
+  }
+
+  &__subtitle {
+    grid-column: 1 / -1;
+  }
+
+  &__input {
+    grid-column: 1 / -1;
+  }
+
+  &__button {
+    grid-column: 1 / -1;
+
+    display: block;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 22px 0;
+    border: none;
+    color: $white-color;
+    background-color: $orange-color;
+  }
+}
