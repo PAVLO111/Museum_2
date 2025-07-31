@@ -14,8 +14,12 @@
 
   &__content {
     @include page-grid;
-    
-    gap: 50px;
+
+    row-gap: 50px;
+
+    @include on-desktop {
+      row-gap: 63px;
+    }
   }
 
   &__title {
@@ -40,6 +44,10 @@
   // #region contacts
   &__contacts {
     grid-column: 1 / -1;
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
   }
 
   &__adress {
@@ -62,6 +70,10 @@
   // #region schedule
   &__schedule {
     grid-column: 1 / -1;
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
   }
 
   &__list {
@@ -80,6 +92,10 @@
   &__nav {
     grid-column: 1 / -1;
     gap: 5px;
+
+    @include on-desktop {
+      grid-column: span 4;
+    }
   }
 
   &__link--main {
@@ -115,7 +131,7 @@
     justify-content: space-between;
 
     height: 20px;
-    margin-top: 10px;
+    margin-top: 7px;
   }
 
   &__copyright {
