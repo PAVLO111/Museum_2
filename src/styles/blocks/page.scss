@@ -2,6 +2,11 @@ body {
   margin: 0;
 
   background: $c-gray;
+  scroll-behavior: smooth;
+}
+
+body:has(.menu:target) {
+  overflow: hidden;
 }
 
 .main {

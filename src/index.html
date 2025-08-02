@@ -23,7 +23,7 @@
   <!-- #endregion -->
   <!-- #region header -->
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <section class="header__top-bar">
           <a href="#" class="header__logo">
@@ -31,7 +31,7 @@
           </a>
 
           <div class="header__icons">
-            <a href="#" class="header__menu">
+            <a href="#menu" class="header__menu">
               <img src="./images/header/menu-icon.svg" alt="Icon menu">
             </a>
             <a href="#" class="header__language">
@@ -67,7 +67,7 @@
     </header>
     <!-- #endregion -->
     <!-- #region menu -->
-    <aside class="menu">
+    <aside class="menu menu--show" id="menu">
       <div class="container">
         <div class="menu__content">
           <div class="menu__top-bar">
@@ -80,11 +80,13 @@
                 src="./images/menu/language-icon.svg"
                 alt="Icon close"
               >
-              <img
-                class="menu__icon"
-                src="./images/menu/icon-close.svg"
-                alt="Icon close"
-              >
+              <a href="#header" class="menu__close">
+                <img
+                  class="menu__icon"
+                  src="./images/menu/icon-close.svg"
+                  alt="Icon close"
+                >
+              </a>
             </div>
           </div>
           <div class="menu__info">
