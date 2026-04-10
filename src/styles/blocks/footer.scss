@@ -29,7 +29,7 @@
   &__title {
     margin: 0;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 150%;
@@ -117,7 +117,7 @@
   &__link--main {
     margin-bottom: 10px;
 
-    font-family: "Playfair Display", serif;
+    font-family: 'Playfair Display', serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 150%;
@@ -129,15 +129,23 @@
 
   &__link--nav {
     margin-top: 5px;
+    transition: all $effect-duration;
+
+    &:hover {
+      @include footer-hover-links;
+    }
   }
 
-  &__link--nav:hover {
-    transform: translate(0.3);
+  &__link {
+    display: inline-block;
+    margin-top: 5px;
+    transition: all $effect-duration;
 
-    font-family: "Playfair Display", serif;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 150%;
+    &:hover {
+      // background-color: $orange-color;
+
+      @include footer-hover-links;
+    }
   }
 
   // #endregion
